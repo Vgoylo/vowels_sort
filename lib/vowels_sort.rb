@@ -6,14 +6,18 @@ class Sort
   end
 
   def vowels_coukfcyst_sort
-    str.scan(coukfcyst).uniq.sort.reverse
+    numeric? ? [] : str.scan(coukfcyst).uniq.sort.reverse
   end
 
   def vowels_vowels_sort
-    str.scan(vowels).uniq.sort.reverse
+    numeric? ? [] : str.scan(vowels).uniq.sort.reverse
   end
 
   private
+
+  def numeric?
+    Float(self) != nil rescue false && str.scan(/\A+(\W+\D+)\z/)
+  end
 
   def vowels
     /[A|E|I|O|U|Y|a|e|i|o|u|y]/
