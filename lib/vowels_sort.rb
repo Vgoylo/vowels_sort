@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Sort
   attr_accessor :str
 

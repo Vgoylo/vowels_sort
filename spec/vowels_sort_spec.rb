@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/vowels_sort'
 
 RSpec.describe 'Sort' do
@@ -11,13 +13,13 @@ RSpec.describe 'Sort' do
   describe '#vowels_coukfcyst_sort' do
     let(:sort) { Sort.new('apple bread butter') }
     it 'return sorted coukfcyst' do
-      expect(sort.vowels_coukfcyst_sort).to eq %w(t r p l d b)
+      expect(sort.vowels_coukfcyst_sort).to eq %w[t r p l d b]
     end
 
     context 'input with number' do
       let(:sort) { Sort.new('ap1ple br45ead 34butter good') }
       it do
-        expect(sort.vowels_coukfcyst_sort).to eq %w(t r p l g d b)
+        expect(sort.vowels_coukfcyst_sort).to eq %w[t r p l g d b]
       end
     end
 
@@ -46,13 +48,13 @@ RSpec.describe 'Sort' do
   describe '#vowels_vowels_sort' do
     let(:sort) { Sort.new('apple bread butter') }
     it 'return sorted vowels' do
-      expect(sort.vowels_vowels_sort).to eq %w(u e a)
+      expect(sort.vowels_vowels_sort).to eq %w[u e a]
     end
 
     context 'input with number' do
       let(:sort) { Sort.new('ap1ple br45ead 34butter good') }
       it do
-        expect(sort.vowels_vowels_sort).to eq %w(u o e a)
+        expect(sort.vowels_vowels_sort).to eq %w[u o e a]
       end
     end
 
