@@ -16,7 +16,9 @@ class Sort
   private
 
   def numeric?
-    Float(self) != nil rescue false && str.scan(/\A+(\W+\D+)\z/)
+    !Float(self).nil?
+  rescue StandardError
+    false && str.scan(/\A+(\W+\D+)\z/)
   end
 
   def vowels
