@@ -1,6 +1,13 @@
 require_relative '../lib/vowels_sort'
 
 RSpec.describe 'Sort' do
+  context 'return str as a string' do
+    let(:sort) { Sort.new(nil) }
+    it do
+      expect(sort.str).to be_an_instance_of(String)
+    end
+  end
+
   describe '#vowels_coukfcyst_sort' do
     let(:sort) { Sort.new('apple bread butter') }
     it 'return sorted coukfcyst' do
