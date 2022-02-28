@@ -2,7 +2,7 @@ class Sort
   attr_accessor :str
 
   def initialize(str)
-    @str = str
+    @str = str.is_a?(String) ? str : str.to_s
   end
 
   def vowels_coukfcyst_sort
